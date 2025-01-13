@@ -17,7 +17,7 @@ object Empty extends IntSet:
 class NonEmpty(e: Int, left: IntSet, right: IntSet) extends IntSet:
   override def incl(x: Int): IntSet =
     if x < e then NonEmpty(e, left.incl(x), right)
-    else if x > e then NonEmpty(e, left, right.incl(x))
+    else if x > e then NonEmpty(e, left, right.incl(x)) 
     else this
 
   override def contains(x: Int): Boolean =
@@ -31,6 +31,9 @@ class NonEmpty(e: Int, left: IntSet, right: IntSet) extends IntSet:
 
 //Invocation of companion object
 IntSet.singleton(5)
+
+
+
 
 
 
